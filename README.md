@@ -1,2 +1,2 @@
 Project name
-Play me -->https://lihuelalmada.github.io/four-in-line/
+Play me -->https://lihuelalmada.github.io/Four-In-Line/
