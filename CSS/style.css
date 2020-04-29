@@ -249,13 +249,13 @@ body {
         color: #7d6400;
         font-size: 2rem;
         /*square*/
-        background-color: #ffcc00;
-        height: 4rem;
+        background-color: #FF6447;
+        height: 3rem;
         width: 4rem;
         position: relative;
         float: left;
         text-align: right;
-        padding: 1rem 1rem 1rem 0.5rem;
+        padding: 0rem 1rem 1rem 1rem;
         margin: 0 0 0.4rem 3rem;
     }
     #go:before {
@@ -264,11 +264,11 @@ body {
         position: absolute;
         top: 0;
         right: 4rem;
-        width: 0;
-        height: 0;
-        border-top: 2rem solid transparent;
-        border-right: 2rem solid #ffcc00;
-        border-bottom: 2rem solid transparent;
+        width: 1rem;
+        height: 1rem;
+        border-top: 1.5rem solid transparent;
+        border-right: 1.5rem solid #FF6447;
+        border-bottom: 1.5rem solid transparent;
     }
 }
 
@@ -301,29 +301,29 @@ body {
         font-weight: bold;
         align-self: center;
         text-align: center;
-        margin-left: 1rem;
+        margin-left: 0rem;
         color: #7d6400;
-        font-size: 2rem;
+        font-size: 1.5rem;
         /*square*/
-        background-color: #ffcc00;
-        height: 4rem;
+        background-color: #FF6447;
+        height: 3rem;
         width: 4rem;
         position: relative;
         float: left;
         text-align: right;
-        padding: 1rem 1rem 1rem 0.5rem;
-        margin: 0 0 0.4rem 3rem;
+        padding: 1rem 1rem 1rem 0rem;
+        margin: 1rem 0 1rem 1rem;
     }
     #go:before {
         /*triangle*/
         content: "";
         position: absolute;
-        top: 0;
+        top: 0rem;
         right: 4rem;
-        width: 0;
-        height: 0;
-        border-top: 2rem solid transparent;
-        border-right: 2rem solid #ffcc00;
-        border-bottom: 2rem solid transparent;
+        width: 3rem;
+        height: 2rem;
+        border-top: 1.5rem solid transparent;
+        border-right: 1.5rem solid #FF6447;
+        border-bottom: 1.5rem solid transparent;
     }
 }
