@@ -1,19 +1,6 @@
-html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-    /** Reset for REMS - 62.5% = 10px to 16px **/
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 1.6rem;
-    line-height: 2;
+    font-size: 16px;
     background-image: url(../IMG/icon.jpeg);
 }
 
@@ -22,7 +9,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
 }
 
 #back {
@@ -30,7 +17,7 @@ body {
     justify-content: center;
     width: 10%;
     font-family: sans-serif;
-    font-size: 2rem;
+    font-size: 20px;
     color: lightseagreen;
     position: fixed;
 }
@@ -41,7 +28,7 @@ body {
 
 #back:hover {
     cursor: pointer;
-    font-size: 2.5rem;
+    font-size: 25px;
     color: black;
 }
 
@@ -49,9 +36,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 60rem;
-    height: 50rem;
-    box-shadow: 1rem 1rem 5.5rem 0.8rem rgba(170, 207, 202, 1);
+    width: 500px;
+    height: 500px;
+    box-shadow: 10px 10px 5px 8px rgba(170, 207, 202, 1);
 }
 
 #top {
@@ -71,11 +58,11 @@ body {
     height: 100%;
     width: 10%;
     background-color: #00AAD4;
-    border-radius: 4rem 0rem 0rem 0rem;
+    border-radius: 4px 0px 0px 0px;
 }
 
 .right {
-    border-radius: 0rem 4rem 0rem 0rem!important;
+    border-radius: 0px 4px 0px 0px!important;
 }
 
 #center {
@@ -123,8 +110,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5rem;
-    width: 5rem;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     background: white;
 }
@@ -143,50 +130,50 @@ body {
     width: 20%;
     height: 100%;
     font-family: sans-serif;
-    font-size: 1.6rem;
+    font-size: 16px;
 }
 
 #go {
     font-weight: bold;
     align-self: center;
     text-align: center;
-    margin-left: 1rem;
+    margin-left: 10px;
     color: #7d6400;
-    font-size: 2rem;
+    font-size: 20px;
     /*square*/
     background-color: #FF6447;
-    height: 4rem;
-    width: 4rem;
+    height: 30px;
+    width: 30px;
     position: relative;
     float: left;
     text-align: right;
-    padding: 1rem 1rem 1rem 0.5rem;
-    margin: 0 0 0.4rem 3rem;
+    padding: 10px 10px 0px 0.50px;
+    margin: 0 0 0.40px 30px;
 }
 
 #go:before {
     /*triangle*/
     content: "";
     position: absolute;
-    top: 0;
-    right: 4rem;
-    width: 0;
-    height: 0;
-    border-top: 2rem solid transparent;
-    border-right: 2rem solid #FF6447;
-    border-bottom: 2rem solid transparent;
+    top: 0px;
+    right: 40px;
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid transparent;
+    border-right: 20px solid #FF6447;
+    border-bottom: 20px solid transparent;
 }
 
-#circle {
+.circle {
     display: flex;
-    height: 4rem;
-    width: 4rem;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     background: #FF6447;
 }
 
 .yellow {
-    background: #FFCC00!important;
+    background: #FFCC00;
 }
 
 #bot-button {
@@ -198,17 +185,17 @@ body {
 .like {
     background: rgb(47, 0, 255);
     color: white;
-    border-radius: 0.5rem;
-    margin: 1rem;
+    border-radius: 5px;
+    margin: 10px;
 }
 
 .embed {
     background: white;
-    border: 0.1rem solid #0088AA;
+    border: 1px solid #0088AA;
     color: lightskyblue;
     font-weight: bold;
-    border-radius: 0.5rem;
-    margin: 1rem;
+    border-radius: 5px;
+    margin: 10px;
 }
 
 .like:hover,
@@ -216,28 +203,28 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 600px) {
     #main {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 50rem;
-        height: 40rem;
-        box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem white;
+        width: 500px;
+        height: 400px;
+        box-shadow: 5px 5px 5px 5px white;
     }
     .row {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 3.5rem;
-        width: 3.5rem;
+        height: 35px;
+        width: 35px;
         border-radius: 50%;
         background: white;
     }
     #circle {
         display: flex;
-        height: 2rem;
-        width: 2rem;
+        height: 20px;
+        width: 20px;
         border-radius: 50%;
         background: #FF6447;
     }
@@ -245,55 +232,55 @@ body {
         font-weight: bold;
         align-self: center;
         text-align: center;
-        margin-left: 1rem;
+        margin-left: 10px;
         color: #7d6400;
-        font-size: 2rem;
+        font-size: 20px;
         /*square*/
         background-color: #FF6447;
-        height: 3rem;
-        width: 4rem;
+        height: 30px;
+        width: 40px;
         position: relative;
         float: left;
         text-align: right;
-        padding: 0rem 1rem 1rem 1rem;
-        margin: 0 0 0.4rem 3rem;
+        padding: 0px 10px 10px 10px;
+        margin: 0px 0px 4px 30px;
     }
     #go:before {
         /*triangle*/
         content: "";
         position: absolute;
         top: 0;
-        right: 4rem;
-        width: 1rem;
-        height: 1rem;
-        border-top: 1.5rem solid transparent;
-        border-right: 1.5rem solid #FF6447;
-        border-bottom: 1.5rem solid transparent;
+        right: 40px;
+        width: 10px;
+        height: 10px;
+        border-top: 15px solid transparent;
+        border-right: 15px solid #FF6447;
+        border-bottom: 15px solid transparent;
     }
 }
 
-@media (max-width: 50rem) {
+@media (max-width: 500px) {
     #main {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 35rem;
-        height: 40rem;
-        box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem white;
+        width: 350px;
+        height: 400px;
+        box-shadow: 5px 5px 5px 5px white;
     }
     .row {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 3.5rem;
-        width: 3.5rem;
+        height: 35px;
+        width: 35px;
         border-radius: 50%;
         background: white;
     }
     #circle {
         display: flex;
-        height: 2rem;
-        width: 2rem;
+        height: 20px;
+        width: 20px;
         border-radius: 50%;
         background: #FF6447;
     }
@@ -301,29 +288,29 @@ body {
         font-weight: bold;
         align-self: center;
         text-align: center;
-        margin-left: 0rem;
+        margin-left: 0px;
         color: #7d6400;
-        font-size: 1.5rem;
+        font-size: 15px;
         /*square*/
         background-color: #FF6447;
-        height: 3rem;
-        width: 4rem;
+        height: 30px;
+        width: 40px;
         position: relative;
         float: left;
         text-align: right;
-        padding: 1rem 1rem 1rem 0rem;
-        margin: 1rem 0 1rem 1rem;
+        padding: 10px 10px 10px 0px;
+        margin: 10px 0px 10px 10px;
     }
     #go:before {
         /*triangle*/
         content: "";
         position: absolute;
-        top: 0rem;
-        right: 4rem;
-        width: 3rem;
-        height: 2rem;
-        border-top: 1.5rem solid transparent;
-        border-right: 1.5rem solid #FF6447;
-        border-bottom: 1.5rem solid transparent;
+        top: 0px;
+        right: 40px;
+        width: 30px;
+        height: 20px;
+        border-top: 15px solid transparent;
+        border-right: 15px solid #FF6447;
+        border-bottom: 15px solid transparent;
     }
 }
