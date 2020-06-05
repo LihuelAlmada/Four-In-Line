@@ -141,7 +141,7 @@ body {
     color: #7d6400;
     font-size: 20px;
     /*square*/
-    background-color: #FF6447;
+    background-color: #FFCC00;
     height: 30px;
     width: 30px;
     position: relative;
@@ -160,7 +160,7 @@ body {
     width: 0px;
     height: 0px;
     border-top: 20px solid transparent;
-    border-right: 20px solid #FF6447;
+    border-right: 20px solid #FFCC00;
     border-bottom: 20px solid transparent;
 }
 
