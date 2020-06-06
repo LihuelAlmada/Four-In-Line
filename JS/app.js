@@ -1,20 +1,20 @@
-var turn = true;
-var charge1 = 0;
-var charge2 = 0;
-var charge3 = 0;
-var charge4 = 0;
-var charge5 = 0;
-var charge6 = 0;
-var charge7 = 0;
-var colorRow = '#FFCC00';
+var turn = true,
+    charge1 = 0,
+    charge2 = 0,
+    charge3 = 0,
+    charge4 = 0,
+    charge5 = 0,
+    charge6 = 0,
+    charge7 = 0,
+    colorRow = '#FFCC00';
 
 function turnChange() {
     if (turn === true) {
-        turn = false
+        turn = false;
         colorRow = '#FF6447';
         console.log('turn You');
     } else {
-        turn = true
+        turn = true;
         colorRow = '#FFCC00';
         console.log('turn AI');
     }
@@ -51,7 +51,7 @@ function c1() {
             break;
 
     }
-    charge1++
+    charge1++;
     console.log(charge1);
     turnChange();
 }
@@ -87,7 +87,7 @@ function c2() {
             break;
 
     }
-    charge2++
+    charge2++;
     console.log(charge2);
     turnChange();
 
@@ -124,7 +124,7 @@ function c3() {
             break;
 
     }
-    charge3++
+    charge3++;
     console.log(charge3);
     turnChange();
 
@@ -161,7 +161,7 @@ function c4() {
             break;
 
     }
-    charge4++
+    charge4++;
     console.log(charge4);
     turnChange();
 
@@ -198,7 +198,7 @@ function c5() {
             break;
 
     }
-    charge5++
+    charge5++;
     console.log(charge5);
     turnChange();
 
@@ -235,7 +235,7 @@ function c6() {
             break;
 
     }
-    charge6++
+    charge6++;
     console.log(charge6);
     turnChange();
 
@@ -272,7 +272,7 @@ function c7() {
             break;
 
     }
-    charge7++
+    charge7++;
     console.log(charge7);
     turnChange();
 
