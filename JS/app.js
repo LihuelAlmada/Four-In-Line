@@ -232,10 +232,11 @@ function paintRow(columnId) {
         charge7++;
         console.log(charge7);
         console.log('entra al if column del paint ' + columnId);
-
     }
-
 }
+
+/*<div id="column1" class="column">
+                        <div id="row1c1" class="row"></div>*/
 
 function columnClicked(columnId) {
     console.log('El valor de carga es: ' + columnId);
