@@ -1,316 +1,176 @@
 body {
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    background-image: url(../IMG/icon.jpeg);
+    font-family: "open sans", sans-serif;
 }
 
-#container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-#back {
-    display: flex;
-    justify-content: center;
-    width: 10%;
-    font-family: sans-serif;
-    font-size: 20px;
-    color: lightseagreen;
-    position: fixed;
-}
-
-#back a {
+a,
+a:hover,
+a:visited {
     text-decoration: none;
+    color: #000;
 }
 
-#back:hover {
-    cursor: pointer;
-    font-size: 25px;
-    color: black;
-}
-
-#main {
+.wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 500px;
-    height: 500px;
-    box-shadow: 10px 10px 5px 8px rgba(170, 207, 202, 1);
-}
-
-#top {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 80%;
-    background: transparent;
-}
-
-#left,
-#right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 10%;
-    background-color: #00AAD4;
-    border-radius: 4px 0px 0px 0px;
-}
-
-.right {
-    border-radius: 0px 4px 0px 0px!important;
-}
-
-#center {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 80%;
-    height: 100%;
-    background-color: #0088AA;
-}
-
-#bot {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 10%;
-    background-color: #006680;
-}
-
-#score {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 10%;
-    background-color: #FFFFFF;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-    width: 12.5%;
-}
-
-.column:hover {
-    background: lightblue;
-    cursor: pointer;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: white;
-}
-
-#score {
-    display: flex;
     justify-content: space-between;
-    color: #0088AA;
+    min-height: 100vh;
+    width: 100vw;
+    background: transparent url('../IMG/background.svg') repeat center center;
 }
 
-#you,
-#ai {
+.header {
+    align-self: flex-start;
+    padding: 14px 9px;
+}
+
+.header a,
+.header a:visited {
+    color: #08a;
+}
+
+.header a:hover {
+    color: #069;
+}
+
+.game {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    width: 20%;
-    height: 100%;
-    font-family: sans-serif;
-    font-size: 16px;
+    background-color: #FFF;
 }
 
-#go {
-    font-weight: bold;
-    align-self: center;
-    text-align: center;
-    margin-left: 10px;
-    color: #7d6400;
-    font-size: 20px;
-    /*square*/
-    background-color: #FFCC00;
-    height: 30px;
-    width: 30px;
-    position: relative;
-    float: left;
-    text-align: right;
-    padding: 10px 10px 0px 0.50px;
-    margin: 0 0 0.40px 30px;
-}
-
-#go:before {
-    /*triangle*/
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 40px;
-    width: 0px;
-    height: 0px;
-    border-top: 20px solid transparent;
-    border-right: 20px solid #FFCC00;
-    border-bottom: 20px solid transparent;
-}
-
-.circle {
+.game .board {
     display: flex;
-    height: 40px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4AA9D0;
+    padding: 0 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.game .board .column {
+    padding: 5px;
+    background-color: #3987A7;
+}
+
+.game .board .column:hover {
+    background-color: rgba(255, 255, 255, .25);
+}
+
+.game .board .column .spot {
     width: 40px;
-    border-radius: 50%;
-    background: #FF6447;
+    height: 40px;
+    margin: 10px 0;
+    border-radius: 40px;
+    background-color: #FFF;
 }
 
-.yellow {
-    background: #FFCC00;
+.game .board .column .spot.red {
+    background-color: #EE6E52;
 }
 
-#bot-button {
-    display: flex;
+.game .board .column .spot.yellow {
+    background-color: #F8CD46;
+}
+
+.game .ribbon {
     width: 100%;
-    justify-content: center;
+    height: 20px;
+    background-color: #28637B;
 }
 
-.like {
-    background: rgb(47, 0, 255);
-    color: white;
-    border-radius: 5px;
-    margin: 10px;
+.game .players {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #FFF;
 }
 
-.embed {
-    background: white;
-    border: 1px solid #0088AA;
-    color: lightskyblue;
+.game .players .spot {
+    width: 33px;
+    height: 33px;
+    margin: 10px 5px;
+    border-radius: 33px;
+    background-color: #FFF;
+}
+
+.game .players .spot.red {
+    background-color: #EE6E52;
+}
+
+.game .players .spot.yellow {
+    background-color: #F5CA45;
+}
+
+.game .players .player,
+.game .players .direction {
+    line-height: 33px;
+    margin: 10px 0;
+    color: #08a;
+}
+
+.game .players .player {
+    flex: 2;
+}
+
+.game .players .player.p2 {
+    text-align: right;
+}
+
+.game .players .direction {
+    flex: 1;
+    text-align: center;
+}
+
+.game .players .direction.left {
+    flex: 0;
+    width: 0;
+    height: 0;
+    border: 17px solid #F5CA45;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.game .players .direction.text {
+    background-color: #F5CA45;
+    color: #000;
+    font-size: 12px;
     font-weight: bold;
-    border-radius: 5px;
-    margin: 10px;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 5px;
 }
 
-.like:hover,
-.embed:hover {
+.footer button {
+    margin: 5px;
+    border-radius: 3px;
+    padding: 0 5px;
+    font-size: 12px;
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
-    #main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 500px;
-        height: 400px;
-        box-shadow: 5px 5px 5px 5px white;
-    }
-    .row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 35px;
-        width: 35px;
-        border-radius: 50%;
-        background: white;
-    }
-    #circle {
-        display: flex;
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        background: #FF6447;
-    }
-    #go {
-        font-weight: bold;
-        align-self: center;
-        text-align: center;
-        margin-left: 10px;
-        color: #7d6400;
-        font-size: 20px;
-        /*square*/
-        background-color: #FF6447;
-        height: 30px;
-        width: 40px;
-        position: relative;
-        float: left;
-        text-align: right;
-        padding: 0px 10px 10px 10px;
-        margin: 0px 0px 4px 30px;
-    }
-    #go:before {
-        /*triangle*/
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 40px;
-        width: 10px;
-        height: 10px;
-        border-top: 15px solid transparent;
-        border-right: 15px solid #FF6447;
-        border-bottom: 15px solid transparent;
-    }
+.footer button.fb {
+    background-color: #3478E8;
+    border-color: #3478E8;
+    color: #FFF;
 }
 
-@media (max-width: 500px) {
-    #main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 350px;
-        height: 400px;
-        box-shadow: 5px 5px 5px 5px white;
-    }
-    .row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 35px;
-        width: 35px;
-        border-radius: 50%;
-        background: white;
-    }
-    #circle {
-        display: flex;
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        background: #FF6447;
-    }
-    #go {
-        font-weight: bold;
-        align-self: center;
-        text-align: center;
-        margin-left: 0px;
-        color: #7d6400;
-        font-size: 15px;
-        /*square*/
-        background-color: #FF6447;
-        height: 30px;
-        width: 40px;
-        position: relative;
-        float: left;
-        text-align: right;
-        padding: 10px 10px 10px 0px;
-        margin: 10px 0px 10px 10px;
-    }
-    #go:before {
-        /*triangle*/
-        content: "";
-        position: absolute;
-        top: 0px;
-        right: 40px;
-        width: 30px;
-        height: 20px;
-        border-top: 15px solid transparent;
-        border-right: 15px solid #FF6447;
-        border-bottom: 15px solid transparent;
-    }
+.footer button.embed {
+    background-color: transparent;
+    border-color: #3987A7;
+    color: #3987A7;
+}
+
+.footer button.embed:hover {
+    background-color: #3987A7;
+    border-color: #3987A7;
+    color: #FFF;
 }
