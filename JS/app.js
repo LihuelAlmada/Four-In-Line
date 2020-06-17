@@ -13,7 +13,14 @@ var board = [
 ]
 
 var toggleTurn = function () {
-  turn = (turn === 'yellow') ? 'red' : 'yellow'
+  console.log("entra");
+  if(turn === 'yellow'){
+    turn='red';
+    go.style.background = '#EE6E52';
+  }else{
+    turn='yellow';
+    go.style.background = '#F5CA45';
+  }
 }
 
 var columnEventHandler = function (evt) {
@@ -51,7 +58,8 @@ var render = function () {
 }
 
 var init = function () {
-  boardHTML = document.getElementById('board')
+  boardHTML = document.getElementById('board');
+  go = document.getElementById('go');
   turn = Math.random() > 0.5 ? 'yellow' : 'red'
   render()
 }
