@@ -10,8 +10,8 @@ var boardHTML = null,
     [null, null, null, null, null, null],
     [null, null, null, null, null, null]
     ];
+    
 var toggleTurn = function () {
-  console.log("entra");
   if(turn === 'yellow'){
     turn='red';
     go.style.background = '#EE6E52';
@@ -20,11 +20,20 @@ var toggleTurn = function () {
     go.style.background = '#F5CA45';
   }
 }
-var columnEventHandler = function (evt) {
-  var columnId = evt.target.id.substr(1, 1);
+var checkGameStatus= function(col, row){
+  console.log('Column '+col);
+  console.log('row '+row);
+  if(board[col, row]===board[col, row -1])
+  {
+    
+  }
+}
+var columnEventHandler = function (e) {
+  var columnId = e.target.id.substr(1, 1);
   for (var i = 0; i < board[columnId].length; i++) {
     if (!board[columnId][i]) {
       board[columnId][i] = turn;
+      checkGameStatus(columnId, i);
       toggleTurn();
       render();
       break;
